@@ -5,5 +5,9 @@
   width: 100%;
   text-align: center;
   z-index: 1000;
-  background-color: red;
+  background-color: cyan;
+}
+
+body {
+  padding-top: 60px; /* prevents content from hiding under navbar */
 }
