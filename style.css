@@ -66,6 +66,84 @@ body::before {
   position: relative;
 }
 
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* wrapper = the box that expands */
+.menu-wrapper {
+    position: relative;
+}
+
+/* Hamburger icon hidden on desktop */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: white;  
+  cursor: pointer;
+  width: 25px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+/* ========================= */
+/* MOBILE VIEW */
+/* ========================= */
+@media (max-width: 768px) {
+
+  /* show hamburger */
+  .menu-icon {
+    display: block;
+  }
+
+  /* hide logo initially*/
+  .logo{
+    display: none;
+  }
+
+  .navbar {
+    left: 10px;
+    transform: none;
+    width: auto;
+    padding: 10px;
+    padding-right: 0;
+  }
+
+  /* collapsed box (just icon) */
+  .nav-links {
+    position: absolute;
+    top: 0;
+    right: auto;
+    width: 40;
+    height: 40;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 0;
+    opacity: 0;
+
+    overflow: hidden;
+
+    background: rgba(15, 23, 42, 0.95);
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+  }
+
+  /* OPEN → box expands into menu */
+  #menu-toggle:checked ~ .menu-wrapper .nav-links {
+    width: 180px;
+    height: auto;
+
+    padding: 15px 20px;
+
+    opacity: 1;
+  }
+}
+
 /* Hover Effect */
 .nav-links a:hover {
   color: white;
