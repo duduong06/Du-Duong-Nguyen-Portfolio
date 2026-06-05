@@ -131,7 +131,7 @@ body::before {
     border-radius: 10px;
 
     pointer-events: none;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
   }
 
   /* OPEN → box expands into menu */
